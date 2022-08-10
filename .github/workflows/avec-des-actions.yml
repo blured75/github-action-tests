@@ -10,3 +10,10 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '11'
+      - name: hello-world-java-action
+        # You may pin to the exact commit or the version.
+        # uses: sormuras/hello-world-java-action@34113a1c31b4deb2efc4810cd45ad16a90f45c3f
+        uses: sormuras/hello-world-java-action@v1
+        with:
+          # Who to greet
+          who-to-greet: stroumpf grognon
