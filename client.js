@@ -1,4 +1,4 @@
-var taMereHost = process.ENV.TA_MERE_HOST
-var taMerePort = process.ENV.TA_MERE_PORT
+var taMereHost = process.env.TA_MERE_HOST
+var taMerePort = process.env.TA_MERE_PORT
 
 console.log(`taMereHost ${taMereHost}, taMerePort ${taMerePort}`)
