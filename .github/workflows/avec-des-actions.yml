@@ -5,3 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Praout"
+      - name: Setup Java JDK (Java Caca)
+      - uses: actions/setup-java@v3.4.1
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '11'
