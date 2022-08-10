@@ -9,4 +9,6 @@ jobs:
         with:
           node-version: '14'
       - run: npm install -g bats
+      - run: npm install -g cowsay
+      - run: cowsay ta mère la chauve qui mange du boudin à la truelle !
       - run: bats -v
