@@ -1,0 +1,4 @@
+name: Avec des Actions
+on: [push]
+jobs:
+  build:
