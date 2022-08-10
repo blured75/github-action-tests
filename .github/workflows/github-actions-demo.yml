@@ -22,7 +22,7 @@ jobs:
           TA_MERE_HOST: popostgres
           TA_MERE_PORT: grouik
       - name: bash script laufen
-        run: ./.github/scripts/build.sh
+        run: . ./.github/scripts/build.sh
         shell: bash
       - name: Test
         run: npm run test
