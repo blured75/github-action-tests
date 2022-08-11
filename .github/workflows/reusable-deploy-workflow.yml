@@ -1,0 +1,24 @@
+name: Reusable Deploy Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      build_id:
+        required: true
+        description: build_id
+        type: string
+      deploy_target:
+        required: true
+        description: deploy_target
+        type: string
+      perform_deploy:
+        required: true
+        description: perform_deploy
+        type: boolean
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.perform_deploy }}
+    steps:
+      - name: Deploy build to target
+        run: echo Running -> deploy --build ${{ inputs.build_id }} --target ${{ inputs.deploy_target }}
