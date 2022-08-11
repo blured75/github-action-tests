@@ -16,6 +16,14 @@ jobs:
           pwd
           npm install
           ls ${{ github.workspace }}
+      - name: Variable interception in nodejs file
+        run: node client.js
+        env:
+          TA_MERE_HOST: popostgres
+          TA_MERE_PORT: grouik
+      - name: bash script laufen
+        run: . ./.github/scripts/build.sh
+        shell: bash
       - name: Test
         run: npm run test
       - run: echo "🍏 This job's status is ${{ job.status }}."
