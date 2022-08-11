@@ -21,4 +21,7 @@ jobs:
     if: ${{ inputs.perform_deploy }}
     steps:
       - name: Deploy build to target
-        run: echo Running -> deploy --build ${{ inputs.build_id }} --target ${{ inputs.deploy_target }}
+        run: |
+          echo inputs.perform_deploy : ${{ inputs.perform_deploy }}
+          echo Running -> deploy --build ${{ inputs.build_id }} --target ${{ inputs.deploy_target }}
+          
