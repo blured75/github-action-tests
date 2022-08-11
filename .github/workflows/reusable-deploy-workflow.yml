@@ -15,6 +15,9 @@ on:
         description: perform_deploy
         type: boolean
 
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,4 +27,12 @@ jobs:
         run: |
           echo inputs.perform_deploy : ${{ inputs.perform_deploy }}
           echo Running -> deploy --build ${{ inputs.build_id }} --target ${{ inputs.deploy_target }}
-          
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
