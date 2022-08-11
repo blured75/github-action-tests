@@ -1,0 +1,15 @@
+name: checkBranchName
+on: [push]
+jobs:
+  check-feature-c1-branch:
+    if: ${{ github.ref == 'refs/heads/feature/c1' }}
+    runs-on: ubuntu-latest
+    name: Check Branch feature/c1
+    steps:
+      - run: echo "Das ist wirklich die Branch ($GITHUB_REF) refs/heads/feature/c1"
+  display-gepushed-branch:
+    runs-on: ubuntu-latest
+    name: Display branch ref
+    steps:
+      - run: echo "Wir sind mit der Branch $GITHUB_REF"
+
