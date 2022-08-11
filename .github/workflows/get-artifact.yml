@@ -1,5 +1,5 @@
 name: Get Artifact
-on: push
+on: workflow_dispatch
 jobs:
   artifact-download:
     runs-on: ubuntu-latest
