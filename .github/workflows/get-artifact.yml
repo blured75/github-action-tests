@@ -1,0 +1,15 @@
+name: Get Artifact
+on: workflow_dispatch
+jobs:
+  artifact-download:
+    runs-on: ubuntu-latest
+    name: Download output artifact
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+      - name: ls
+        run: |
+          ls
+          cat output.log
